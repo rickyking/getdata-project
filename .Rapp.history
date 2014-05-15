@@ -1,0 +1,394 @@
+install.packages("devtools")#
+devtools::install_github("hadley/httr")
+install.packages("devtools")#
+devtools::install_github("hadley/httr", dependency=T)
+install_github("dplyr", dependencies = T)
+install.pacakges("bit64")
+install.packages("bit64")
+install.packages("rjson")
+install_github("twitteR", username="geoffjentry")
+install.packages("RMySQL")
+install_github("RMySQL", username="jeffreyhorner")
+require(shiny)
+require(wordcloud)
+require(rCharts)
+require(twitteR)
+require(devtools)#
+install_github('ramnathv/rCharts@dev')#
+install_github('ramnathv/rMaps')
+install.packages("base64enc")
+require(devtools)#
+install_github('ramnathv/rCharts@dev')#
+install_github('ramnathv/rMaps')
+install.packages("wordcloud")
+require(shiny)
+require(wordcloud)
+require(rCharts)
+require(twitteR)
+??twitteR
+?twitteR
+??twitteR
+library(datasets)
+data(iris)
+mean(iris$Sepal.Length[iris$species == "virginica"])
+str(iris)
+mean(iris$Sepal.Length[iris$Species == "virginica"])
+apply(iris[, 1:4], 2, mean)
+library(datasets)#
+data(mtcars)
+str(mtcars)
+with(mtcars, tapply(mpg, cyl, mean))
+?mtcars
+with(mtcars[cyl==4,], mean(hp))
+with(mtcars[mtcars$cyl==4,], mean(hp))
+with(mtcars[mtcars$cyl==8,], mean(hp))
+with(mtcars[mtcars$cyl==8,], mean(hp)) - with(mtcars[mtcars$cyl==8,], mean(hp))
+with(mtcars[mtcars$cyl==8,], mean(hp)) - with(mtcars[mtcars$cyl==4,], mean(hp))
+debug(ls)
+ls()
+require(swirl)
+Q
+?debug
+Q
+undebug(ls)
+require(swirl)
+swirl()
+myVector <- 1:20
+myVector
+dim(myVector)
+length(myVector)
+dim(myVector) <- c(4,5)
+dim(myVector)
+attributes(myVector)
+myVector
+class(myVector)
+myMatrix <- myVector
+?matrix
+myMatrix2<-matrix(1:20, nrow=4, ncol=1, byrow=F)
+myMatrix2<-matrix(1:20, nrow=4, ncol=5, byrow=F)
+identical(myMatrix, myMatrix2)
+patients <- c("Bill", "Gnia", "Kelly", "Sean")
+patients <- c("Bill", "Gina", "Kelly", "Sean")
+cbind(patients, myMatrix)
+myData <- data.frame(patients, myMatrix)
+myData
+class(myData)
+cnames <- c("patient", "age", "weight", "bp", "rating",#
+ "test")
+colnames(myD)
+colnames(myData)<-cnames
+myData
+q()
+url = "http://biostat.jhsph.edu/~jleek/contact.html "
+con = url("http://biostat.jhsph.edu/~jleek/contact.html")
+tt<-readLines(con)
+str(tt)
+nchar(10)
+nchar(ss[10])
+nchar(tt[10])
+nchar(tt[20])
+nchar(tt[30])
+nchar(tt[100])
+?read.csv
+close(con)
+con = url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for")
+tt <- readLines(con)
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for", "/Users/yjin/Dropbox/01.02.Study Notes/datasciencecoursera/getdata/quizz2")
+?download.file
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for", "/Users/yjin/Dropbox/01.02.Study Notes/datasciencecoursera/getdata/quizz2", mode = "wb")
+mode = "wb", method="curl")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for",
+"/Users/yjin/Dropbox/01.02.Study Notes/datasciencecoursera/getdata/quizz2",
+mode = "wb", method="curl")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for",
+"/Users/yjin/Dropbox/01.02.Study Notes/datasciencecoursera/getdata/quizz2/getdata%2Fwksst8110.for",
+mode = "wb", method="curl")
+?read.table
+tt<-read.fwf(
+file=url("http://www.cpc.ncep.noaa.gov/data/indices/wksst8110.for"),
+skip=4,
+widths=c(12, 7,4, 9,4, 9,4, 9,4))
+str(tt)
+sum(tt[,4])
+sum(tt[,5])
+tt<-read.fwf(#
+  file=url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"),#
+  skip=4,#
+  widths=c(12, 7,4, 9,4, 9,4, 9,4))#
+str(tt)#
+sum(tt[,4])
+?url
+?read.fwf
+tt<-read.fwf(
+file=url("https://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"),
+skip=4,
+widths=c(12, 7,4, 9,4, 9,4, 9,4), method="curl")
+tt<-read.fwf(
+file=url("http://d396qusza40orc.cloudfront.net/getdata%2Fwksst8110.for"),
+skip=4,
+widths=c(12, 7,4, 9,4, 9,4, 9,4))
+str(tt)
+sum(tt[,4])
+?read.fmf
+?read.fwf
+setwd("/Users/yjin/Dropbox/01.02.Study Notes/datasciencecoursera/getdata/quizz3/")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv", "q3.csv", method = "curl")#
+q3 <- read.csv("q3.csv", stringsAsFactors=F)#
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv", "q3_1.csv", method ="curl")#
+q3_1 <- read.csv("q3_1.csv", stringsAsFactors = F)#
+#
+q3 <- q3[q3$X!="",]#
+#
+dim(q3)#
+dim(q3_1)#
+#
+names(q3)#
+#
+tt <- merge(q3_1, q3, by.x = "CountryCode", by.y = "X")#
+dim(tt)#
+#
+str(tt)#
+#
+ttt<- tt[tt$"Gross.domestic.product.2012"!="",]#
+dim(ttt)#
+#
+ttt$"Gross.domestic.product.2012" <- as.numeric(ttt$"Gross.domestic.product.2012")#
+tttt <- ttt[order(ttt$"Gross.domestic.product.2012", decreasing = T),]
+q4<-tttt
+tapply(q4$"Gross.domestic.product.2012",q4$Income.Group, mean)
+setwd
+source("/Users/yjin/Dropbox/01.02.Study Notes/datasciencecoursera/getdata/project/run_analysis.R")
+setwd("/Users/yjin/Dropbox/01.02.Study Notes/datasciencecoursera/getdata/project/")
+dir()
+p_data <- "UCI HAR Dataset"
+dir(p_data)
+dir(paste0(p_data, "train"))
+dir(paste0(p_data, "/train"))
+X_train <- read.table(paste0(p_data,"/train", "X_train.txt"))
+X_train <- read.table(paste(p_data,"train", "X_train.txt", sep = "/"))
+X_train
+head(X_train)
+y_train <- read.table(paste(p_data,"train", "y_train.txt", sep = "/"))
+subject_train <- read.table(paste(p_data,"train", "subject_train.txt", sep = "/"))
+dim(X_train)
+dim(y_train)
+dim(subject_train)
+y_test <- read.table(paste(p_data,"test", "y_test.txt", sep = "/"))
+subject_test <- read.table(paste(p_data,"test", "subject_test.txt", sep = "/"))
+dim(y_test)
+dim(subject_test)
+X_test <- read.table(paste(p_data,"test", "X_test.txt", sep = "/"))
+dim(X_test)
+X <- rbind(X_train, X_test)
+X <- rbind(X_train, X_test)
+y <- rbind(y_train, y_test)
+subject <- rbind(subject_train, subject_test)
+dim(X)
+dim(y)
+dim(subject)
+data_s1 <- cbind(subject, y, X)
+featureNames <- read.table(paste(p_data, "features.txt", sep = "/"))
+featureNames
+grep("mean", featureNames, value=T)
+grep("mean", featureNames$V2, value = T)
+grep("mean|std", featureNames$V2, value = T)
+ind <- grep("mean|std", featureNames$V2)
+names(data_s1)
+data_s1 <- cbind(subject = subject, y = y, X)
+names(data_s1)
+subject
+data_s1 <- cbind(subject = as.vecotr(subject), y = y, X)
+data_s1 <- cbind(subject = as.vector(subject), y = y, X)
+names(data_s1)
+colnames(subject)
+colnames(subject) <- "subject"
+colnemas(y)
+colnames(y)
+colnames(y) <- y
+data_s1 <- cbind(subject, y, X)
+names(data_s1)
+names(data_s1)
+str(subject)
+str(y)
+y <- rbind(y_train, y_test)
+str(y)
+colnames(y) <- "y"
+data_s1 <- cbind(subject, y, X)
+names(data_s1)
+ind <- ind + 2
+data_s2 <- data_s1[ , c(1,2,ind)]
+str(data_s2)
+labelValue <- grep("mean|std", featureNames$V2, value = T)
+labelValue
+activityName <- read.table(paste(p_data, "activity_labels.txt", sep = "/"))
+activityName
+colnames(activityName) <- c("y", "ActivityName")
+activityName
+data_s3 <- merge(activityName, data_s2, by = "y", all = T)
+str(data_s2)
+dim(data_s2)
+dim(data_s3)
+names(data_s3)
+table(data_s3$ActivityName)
+featureNames
+labelValue
+gsub("^t", "time",labelValue)
+gsub("^f", "frequency",labelValue)
+strsplit(labelValue, "-")
+lableValue2rename <- strsplit(labelValue, "-")
+lableValue2Rename <- strsplit(labelValue, "-")
+lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	gsub("^t", "time",x[1])#
+	gsub("^f", "freq",x[1])#
+	# remove "()"#
+	gsub("()","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+}
+)
+lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("()","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+})
+lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("()","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	return(x)#
+})
+lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("\(\)","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	return(x)#
+})
+lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("\\(\\)","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	return(x)#
+})
+lableValue2Renamed <- lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("\\(\\)","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	return(x)#
+})
+newLableValue <- sapply(lableValue2Renamed, paste0)
+newLableValue
+sapply(lableValue2Renamed, paste0)
+?sapply
+lapply(lableValue2Renamed, paste0)
+lableValue2Renamed <- lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("\\(\\)","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	return(paste0(x))#
+})
+lableValue2Renamed
+lableValue2Renamed <- lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("\\(\\)","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	return(paste(x, colapse = ""))#
+})
+lableValue2Renamed
+lableValue2Renamed <- lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("\\(\\)","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	browser()#
+	return(paste(x, colapse = ""))#
+})
+x
+paste(x)
+paste(x, collapse="")
+Q
+lableValue2Renamed <- lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("\\(\\)","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	browser()#
+	return(paste(x, collapse = ""))#
+})
+Q
+lableValue2Renamed <- lapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("\\(\\)","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	# collapse all texts#
+	return(paste(x, collapse = ""))#
+})
+lableValue2Renamed
+lableValue2Renamed <- sapply(lableValue2Rename, function(x) {#
+	# t - time, f - frequency#
+	x[1] <- gsub("^t", "time",x[1])#
+	x[1] <- gsub("^f", "freq",x[1])#
+	# remove "()"#
+	x[2] <- gsub("\\(\\)","", x[2])#
+	# Capitalize first letter of function#
+	substring(x[2], 1, 1) <- toupper(substring(x[2], 1, 1))#
+	# collapse all texts#
+	return(paste(x, collapse = ""))#
+})
+lableValue2Renamed
+data_s4 <- data_s3
+names(data_s4)
+data_s3 <- data_s3[,-1]
+data_s4 <- data_s3
+names(data_s4)
+ncol(data_s4)
+colnames(data_s4)[3:ncol(data_s4)] <- lableValue2Renamed
+aggregate(data_s4[,3:ncol(data_s4)], data_s4[c(1,2),], FUN = mean)
+aggregate(data_s4[,3:ncol(data_s4)], data_s4[, c(1,2)], FUN = mean)
+data_s5 <- aggregate(data_s4[,3:ncol(data_s4)], data_s4[, c(1,2)], FUN = mean)
+data_s5 <- aggregate(data_s4[,3:ncol(data_s4)], data_s4[, c("ActivityName","subject")], FUN = mean)
+colnames(data_s5)
+tabble(data_s5[,c(1,2)])
+table(data_s5[,c(1,2)])
+write.table(data_s5, file = "tidyData.txt")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", method = "curl")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "getdata_projectfiles_UCI HAR Dataset.zip",method = "curl")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "UCI HAR Dataset.zip",method = "curl")

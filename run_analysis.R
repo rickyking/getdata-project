@@ -4,6 +4,7 @@
 # download data to the working directory and extract
 if (!file.exists("UCI HAR Dataset")) {
 	if (!file.exists("UCI HAR Dataset.zip")) {
+		# remove method="curl" if you are on windows
 		download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "UCI HAR Dataset.zip",method = "curl")
 		unzip("UCI HAR Dataset.zip")
 	} else {
