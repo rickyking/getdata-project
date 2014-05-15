@@ -1,5 +1,15 @@
 # Set the working directory path
-setwd("/Users/yjin/Dropbox/01.02.Study Notes/datasciencecoursera/getdata/project/")
+# setwd("/Users/yjin/Dropbox/01.02.Study Notes/datasciencecoursera/getdata/project/")
+
+# download data to the working directory and extract
+if (!file.exists("UCI HAR Dataset")) {
+	if (!file.exists("UCI HAR Dataset.zip")) {
+		download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "UCI HAR Dataset.zip",method = "curl")
+		unzip("UCI HAR Dataset.zip")
+	} else {
+		unzip("UCI HAR Dataset.zip")
+	}
+}
 
 # Give the path to data
 p_data <- "UCI HAR Dataset"
@@ -89,11 +99,11 @@ table(data_s5[,c(1,2)])
 # Output of data 
 write.table(data_s5, file = "tidyData.txt")
 
-# Output of Codebook via `Hmisc::describe`
-# Turn subject into factor
-data_s5[, 2] <- as.factor(data_s5[ , 2])
-# codebook
-codeBook <- describe(data_s5)
-sink("codebook.md");print(codeBook);sink()
-# The modification over markdown codebook
+# # Output of Codebook via `Hmisc::describe`
+# # Turn subject into factor
+# data_s5[, 2] <- as.factor(data_s5[ , 2])
+# # codebook
+# codeBook <- describe(data_s5)
+# sink("codebook.md");print(codeBook);sink()
+# # The modification over markdown codebook
 

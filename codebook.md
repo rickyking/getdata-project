@@ -2,7 +2,7 @@
 
 ## Extraction and Transformation
 
-The tidy dataset contains 81 variables and 180 observations. All the data is transformed from a combined dataset of train and test data.
+The tidy dataset contains 81 variables and 180 observations. All the data is transformed from a combined dataset of train and test data. For a summary of steps, please refer to `README.md`. And you can also refer to `run_analysis.R`, the original code with full comments/explanations.
 
 In the combined dataset, we have joined all the data from `X`, `y`, `subject` of "train" and "test" dataset to created an all-in-one dataset which:
 
